@@ -1,0 +1,62 @@
+#notes-container {
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+
+#notes-container #note-body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+textarea[name='notes-input'] {
+    background-color: #3e3e3e;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 5px 10px;
+    border: none;
+    resize: none;
+    font-family: monospace;
+}
+
+textarea[name='notes-input']::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+textarea[name='notes-input']::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255, 0.2);
+    border-radius: 5px;
+}
+
+
+#notes-container #op-statusbar {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+#notes-container #op-statusbar .font-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255, 0.05);
+    border-radius: 7px;
+    width: 35px;
+    height: 35px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+#notes-container #op-statusbar .font-btn:hover {
+    background-color: rgba(255,255,255, 0.15);
+    transition-duration: 150ms;
+}
+#notes-container #op-statusbar #save-note-btn {
+    margin-left: 5px;
+}

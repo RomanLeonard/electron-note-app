@@ -1,0 +1,9 @@
+@import 'style.css';
+
+@import 'sidebar.css';
+@import 'notes-container.css';
+
+
+#window-body, #window-content {
+    height: 100vh;
+}

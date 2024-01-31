@@ -1,0 +1,85 @@
+
+
+#sidebar {
+    height: 100%;
+    overflow: hidden;
+}
+#sidebar .row {
+    height: 100%;
+}
+#sidebar #sidebar-notes-list {
+    height: 90%;
+}
+#sidebar .list-group {
+    background-color: transparent;
+    height: 97%;
+    overflow: scroll;
+}
+#sidebar .list-group::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+#sidebar .list-group::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+}
+
+
+#sidebar .list-group .list-group-item {
+    background-color: transparent;
+    color: #fff;
+    border-bottom-color:  rgba(255,255,255,0.1);
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    min-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#sidebar .list-group .list-group-item:hover {
+    background-color: #3a3a3a;
+    transition-duration: 150ms;
+}
+#sidebar .list-group .list-group-item.active {
+    border-color: transparent;
+    background-color: #444444;
+}
+#sidebar .list-group .list-group-item:first-of-type {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+#sidebar .list-group .list-group-item:last-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+#sidebar .list-group .list-group-item .sidebar-note-title {
+}
+#sidebar .list-group .list-group-item .sidebar-note-delete-btn {
+    position: absolute;
+    background-color: #3a3a3a;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    border-radius: 9px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 10px #3a3a3a;
+}
+#sidebar .list-group .list-group-item:hover > .sidebar-note-delete-btn {
+    display: flex;
+}
+#sidebar .list-group .list-group-item .sidebar-note-delete-btn:hover > .icon-default {
+    display: none;
+}
+#sidebar .list-group .list-group-item .sidebar-note-delete-btn:hover > .icon-active {
+    display: block;
+}
+#sidebar .list-group .list-group-item .sidebar-note-delete-btn .icon-active {
+    display: none;
+}

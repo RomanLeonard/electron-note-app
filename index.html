@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Custom files -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <title>lNote</title>
+</head>
+<body>
+    <div class="container-fluid" id="window-body">
+
+        <div class="row" id="window-content">
+            
+            <div class="col-3 p-0 m-0" id="sidebar">
+                <div class="row p-0 mx-0 my-2">
+                    <div class="col-12 p-2 m-0">
+                        <span class="btn btn-success w-100" id="sidebar-new-note-btn">+ New note</span>
+                    </div>
+                    <div class="col-12 p-0 m-0 mt-3" id="sidebar-notes-list">
+                        <ul class="list-group list-group-flush">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-9" id="notes-container">
+                <div id="note-body">
+                    <textarea name="notes-input" data-note_index=""></textarea>
+
+                    <div id="op-statusbar">
+                        <span class="font-btn" id="font-increase-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                            </svg>
+                        </span>
+                        <span class="font-btn" id="font-decrease-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
+                            </svg>
+                        </span>
+                        <span class="btn btn-success" id="save-note-btn">Save</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom files -->
+    <!-- Default values -->
+    <script src="./assets/js/defaults.js"></script> 
+
+    <!-- Notes functionality -->
+    <script src="./assets/js/notes-functionality.js"></script>
+
+    <!-- Fonts functionality -->
+    <script src="./assets/js/font-controls.js"></script>
+
+
+</body>
+</html>
